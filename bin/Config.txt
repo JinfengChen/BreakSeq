@@ -1,0 +1,20 @@
+# The configuration file for BreakSeq
+
+PYTHON="/home9-2/gersteinlab/common/programs/python-2.6.1/bin"
+
+Genome_Seq_Directory="/rhome/cjinfeng/BigData/00.RD/seqlib/MSU7_unmask/"
+RepeatMasked_Genome_Directory="/rhome/cjinfeng/BigData/00.RD/seqlib/MSU7_mask/"
+BLAST_Directory="/usr/bin/"
+RepeatMasker_Program_Directory="/opt/repeat-masker/4-0-2/"
+
+Blat_Client="/usr/local/bin/blat"
+Blat_TwoBit={"Ogla":"/rhome/cjinfeng/BigData/00.RD/Transposon_Oryza/OGE_genomes/O.glaberrima/O.glaberrima.v1.0.2bit", "Opun":"/rhome/cjinfeng/BigData/00.RD/Transposon_Oryza/OGE_genomes/O.punctata/O.punctata.v1.0.2bit"}
+#Blat_TwoBit={"Ogla":"/rhome/cjinfeng/BigData/00.RD/Transposon_Oryza/OGE_genomes/O.glaberrima/O.glaberrima.v1.0.2bit", "Obar":"/rhome/cjinfeng/BigData/00.RD/Transposon_Oryza/OGE_genomes/O.barthii/O.barthii.v1.0.2bit", "Opun":"/rhome/cjinfeng/BigData/00.RD/Transposon_Oryza/OGE_genomes/O.punctata/O.punctata.v1.0.2bit", "Obra":"/rhome/cjinfeng/BigData/00.RD/Transposon_Oryza/OGE_genomes/O.brachyantha/O.brachyantha.v1.4.2bit"}
+Net_Chain={"Ogla":"/rhome/cjinfeng/BigData/00.RD/GenomeAlign/Lastz/output/MSU7vsOGL/all_net_level1/net.level", "Opun":"/rhome/cjinfeng/BigData/00.RD/GenomeAlign/Lastz/output/MSU7vsOPU/all_net_level1/net.level"}
+
+Gencode_GFF="/rhome/cjinfeng/BigData/00.RD/seqlib/GFF/MSU7.gene.gtf"
+
+# Currently, for SV Mapper's config, see its own README
+#Sam_Tools_Path="/home9-2/gersteinlab/common/programs/samtools-0.1.6_x86_64-linux"
+#Bowtie_Path="/home9-2/gersteinlab/common/programs/bowtie-0.11.3"
+#Bowtie_Indexes="/home9-2/gersteinlab/common//genomes/human/reference/hg18/bowtie"
