@@ -37,7 +37,7 @@ def Iseq(gff, fna):
                 unit = re.split(r'\t',line)
                 m = s.search(unit[8])
                 if m:
-                    print line
+                    #print line
                     seq   = m.groups(0)[0]
                     seqid = '%s:%s-%s:%s' % (unit[0], unit[3], unit[4], unit[1])
                     newrecord = SeqRecord(Seq(seq),id=seqid,description="")
