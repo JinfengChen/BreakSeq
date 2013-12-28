@@ -20,6 +20,9 @@ faToTwoBit Oryza_genome/Ogla.fa Oryza_genome/Ogla.2bit
 python ChrName.py --input /rhome/cjinfeng/BigData/00.RD/Transposon_Oryza/OGE_genomes/O.punctata/O.punctata.v1.0.fasta --output ./Oryza_genome/Opun.fa
 faToTwoBit Oryza_genome/Opun.fa Oryza_genome/Opun.2bit
 
+python ChrName.py --input /rhome/cjinfeng/BigData/00.RD/Transposon_Oryza/OGE_genomes/O.barthii/O.barthii.v1.0.fasta --output ./Oryza_genome/Obar.fa
+faToTwoBit Oryza_genome/Obar.fa Oryza_genome/Obar.2bit
+
 echo "creat chain_net for genome alignment"
 mkdir chain_net/MSU7_OGL.all_net_level1
 cat /rhome/cjinfeng/BigData/00.RD/GenomeAlign/Lastz/output/MSU7vsOPU/prenet_net/Chr* > chain_net/MSU7_OGL.all_net_level1/net.level
@@ -30,6 +33,12 @@ mkdir chain_net/MSU7_OPU.all_net_level1
 cat /rhome/cjinfeng/BigData/00.RD/GenomeAlign/Lastz/output/MSU7vsOPU/prenet_net/Chr* > chain_net/MSU7_OPU.all_net_level1/net.level
 python Net_ChrName.py --input chain_net/MSU7_OPU.all_net_level1/net.level
 /opt/kentsrc/live/bin/netFilter -type=top chain_net/MSU7_OPU.all_net_level1/net.level.rename > chain_net/MSU7_OPU.all_net_level1/net.level.rename.top
+
+mkdir MSU7_OBA.all_net_level1
+cat /rhome/cjinfeng/BigData/00.RD/GenomeAlign/Lastz/output/MSU7vsOBA/prenet_net/Chr* > chain_net/MSU7_OBA.all_net_level1/net.level
+python Net_ChrName.py --input chain_net/MSU7_OBA.all_net_level1/net.level
+/opt/kentsrc/live/bin/netFilter -type=top chain_net/MSU7_OBA.all_net_level1/net.level.rename > chain_net/MSU7_OBA.all_net_level1/net.level.rename.top
+
 
 echo "test run svState.py"
 python /rhome/cjinfeng/software/tools/breakseq-1.3/bin/svState/svState.py test.gff ./win200 200 > log 2> log2

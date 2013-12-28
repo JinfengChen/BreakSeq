@@ -45,7 +45,7 @@ def rename(infile):
                     left  = m1.groups(0)[1]
                     unit = re.split(r' ',left)
                     m2   = s2.search(unit[3])
-                    chrn = 'Chr' + m2.groups(0)[0].zfill(1)
+                    chrn = 'Chr' + str(int(m2.groups(0)[0])).zfill(1)
                     unit[3] = chrn
                     newline = ' '.join(unit)
                     print >> ofile, '%s%s' % (space, newline)
